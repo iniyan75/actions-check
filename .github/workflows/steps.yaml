@@ -1,0 +1,27 @@
+
+name: Run Scripts
+
+on:
+  push:
+    branches:
+      - main  # Run on main branch
+      - '*'   # Run on any other branch
+
+jobs:
+  run_scripts:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8 
+    - name: inside
+      run: |
+        pwd
+        python check/check.py
+        
+    
