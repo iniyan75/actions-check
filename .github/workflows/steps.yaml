@@ -18,4 +18,7 @@ jobs:
           - FUNCTION_NAME: App
 
     steps:
-     - run: echo ${{ matrix.functions }}
+     - name: check 
+       if: contains(matrix.functions.*.ONLY_FUNCTION, 'yes')
+       run: echo "true"
+        
