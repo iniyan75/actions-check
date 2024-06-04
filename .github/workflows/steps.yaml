@@ -21,6 +21,7 @@ jobs:
 
     steps:
      - name: check 
-       if: contains(matrix.functions.*.ONLY_FUNCTION, 'yes')
-       run: echo "true"
+       run: |
+        echo ${{ matrix.functions.*.ONLY_FUNCTION }}
+        echo "true"
         
