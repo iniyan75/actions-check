@@ -21,7 +21,7 @@ jobs:
         include:
           - function:
               - FUNCTION_NAME: Task
-                ONLY_FUNCTION: 'yes'
+            ONLY_FUNCTION: 'yes'
 
     steps:
      - name: check 
