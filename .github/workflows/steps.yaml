@@ -13,14 +13,17 @@ jobs:
       matrix:
         function:
           - FUNCTION_NAME: Task
-            ONLY_FUNCTION: 'yes'
+
           - FUNCTION_NAME: Gcp
-            ONLY_FUNCTION: 'yes'
+            
           - FUNCTION_NAME: App
-            ONLY_FUNCTION: 'yes'
+           
+        include:
+          - function:
+              - FUNCTION_NAME: Task
+                ONLY_FUNCTION: 'yes'
 
     steps:
      - name: check 
-       env:
-          GITHUB_CONTEXT: ${{ toJSON(matrix.functions.*) }}
-       run: echo "$GITHUB_CONTEXT"
+       run: echo ${{ matrix.function.ONLY_FUNCTION }}
+     
