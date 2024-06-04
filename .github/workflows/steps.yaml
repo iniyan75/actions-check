@@ -25,5 +25,5 @@ jobs:
 
     steps:
      - name: check 
-       run: echo ${{ matrix.function.ONLY_FUNCTION }}
+       run: echo ${{ matrix.ONLY_FUNCTION }}
      
