@@ -22,5 +22,5 @@ jobs:
     steps:
      - name: check 
        env:
-          GITHUB_CONTEXT: ${{ toJSON(matrix.functions.*.) }}
+          GITHUB_CONTEXT: ${{ toJSON(matrix.functions.*) }}
        run: echo "$GITHUB_CONTEXT"
