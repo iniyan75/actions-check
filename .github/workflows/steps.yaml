@@ -17,13 +17,9 @@ jobs:
           - FUNCTION_NAME: Gcp
             
           - FUNCTION_NAME: App
-           
-        include:
-          - function:
-              - FUNCTION_NAME: Task
-            ONLY_FUNCTION: 'yes'
+          
 
     steps:
      - name: check 
-       run: echo ${{ matrix.ONLY_FUNCTION }}
+       run: echo "${{ toJson(matrix) }}"
      
