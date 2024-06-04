@@ -1,27 +1,21 @@
-
-name: Run Scripts
+name: Deploy Cloud Functions
 
 on:
   push:
     branches:
-      - main  # Run on main branch
-      - '*'   # Run on any other branch
+      - '**'
+
 
 jobs:
-  run_scripts:
+  list-functions:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        function:
+          - FUNCTION_NAME: Task
+          - FUNCTION_NAME: Gcp
+            ONLY_FUNCTION: 'yes'
+          - FUNCTION_NAME: App
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8 
-    - name: inside
-      run: |
-        pwd
-        python check/check.py
-        
-    
+     - run: echo ${{ matrix.functions }}
