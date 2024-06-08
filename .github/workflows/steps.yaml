@@ -10,12 +10,20 @@ env:
    FUNCTION_NAMES: "Task"
 
 jobs:
+  matinput:
+    runs-on: ubuntu-latest
+    outputs:
+      my-output: ${{ steps.step1.outputs.my-output }}
+    steps:
+      - name: Step 1
+        id: step1
+        run: echo "::set-output name=my-output::Hello from Job 1"
   list-functions:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         function:
-          - ${{ env.FUNCTION_NAMES }}
+          - ${{ needs.job1.outputs.my-output }}
 
    
 
