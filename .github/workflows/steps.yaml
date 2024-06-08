@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - '**'
-
+      
+      
+env:
+   FUNCTION_NAMES: "Task"
 
 jobs:
   list-functions:
@@ -14,8 +17,7 @@ jobs:
         function:
           - ${{ env.FUNCTION_NAMES }}
 
-    env:
-      FUNCTION_NAMES: "Task,Gcp,App"
+   
 
     steps:
      - name: check 
