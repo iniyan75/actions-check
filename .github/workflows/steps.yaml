@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        function: ${{ needs.job1.outputs.fun }}
+        function: ${{ needs.matinput.outputs.fun }}
           
 
    
