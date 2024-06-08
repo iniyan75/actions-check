@@ -7,10 +7,7 @@ on:
       
       
 env:
-   FUNCTION_NAMES: 
-     - a
-     - b
-
+   FUNCTION_NAMES: "item1,item2,item3"
 jobs:
   matinput:
     runs-on: ubuntu-latest
