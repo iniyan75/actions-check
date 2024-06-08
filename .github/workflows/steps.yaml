@@ -24,6 +24,7 @@ jobs:
       matrix:
         function:
           - ${{ needs.job1.outputs.my-output }}
+          - ${{ needs.job1.outputs.my-output }}
 
    
 
