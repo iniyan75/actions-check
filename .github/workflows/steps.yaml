@@ -7,24 +7,26 @@ on:
       
       
 env:
-   FUNCTION_NAMES: "Task"
+   FUNCTION_NAMES: 
+     - a
+     - b
 
 jobs:
   matinput:
     runs-on: ubuntu-latest
     outputs:
-      my-output: ${{ steps.step1.outputs.my-output }}
+      fun: ${{ steps.step1.outputs.fun }}
     steps:
       - name: Step 1
         id: step1
-        run: echo "::set-output name=my-output::Hello from Job 1"
+        run: echo "fun=${{ env.FUNCTION_NAMES }}" >> $GITHUB_ENV
   list-functions:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         function:
-          - ${{ needs.job1.outputs.my-output }}
-          - ${{ needs.job1.outputs.my-output }}
+          - ${{ needs.job1.outputs.fun }}
+          
 
    
 
