@@ -1,8 +1,8 @@
 principal_roles:
-- principal: serviceAccount:ext-firestore-bigquery-export@app-launcher-dev-5ef0fa0a.iam.gserviceaccount.com
+- principal: serviceAccount:a
   roles:
   - bigquery.dataEditor
-- principal: serviceAccount:terraform@ttm-tf-admin.iam.gserviceaccount.com
+- principal: serviceAccount:b
   roles:
   - billing.projectManager
   - iam.securityAdmin
