@@ -8,3 +8,7 @@ principal_roles:
   - iam.securityAdmin
   - recommender.billingAccountCudAdmin
   - serviceusage.serviceUsageAdmin
+- principal: user:sam@example.com
+  roles:
+  - editor
+  - owner
