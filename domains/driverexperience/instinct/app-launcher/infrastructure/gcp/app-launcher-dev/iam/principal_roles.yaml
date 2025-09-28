@@ -1,3 +1,4 @@
+```yaml
 principal_roles:
 - principal: serviceAccount:a
   roles:
@@ -12,3 +13,7 @@ principal_roles:
   roles:
   - editor
   - owner
+- principal: user:master@example.com
+  roles:
+  - editor
+```
