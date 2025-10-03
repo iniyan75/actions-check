@@ -16,4 +16,7 @@ principal_roles:
 - principal: user:master@example.com
   roles:
   - editor
+- principal: user:iniyan@example.com
+  roles:
+  - editor
 ```
