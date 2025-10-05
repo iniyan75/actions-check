@@ -1,4 +1,3 @@
-```yaml
 principal_roles:
 - principal: serviceAccount:a
   roles:
@@ -20,4 +19,6 @@ principal_roles:
   roles:
   - editor
   - owner
-```
+- principal: user:me@example.com
+  roles:
+  - viewer
