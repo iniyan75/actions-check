@@ -24,4 +24,5 @@ principal_roles:
   roles:
   - viewer
   - NA
+  - access
 ```
