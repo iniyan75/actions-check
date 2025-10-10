@@ -1,4 +1,3 @@
-```yaml
 principal_roles:
 - principal: serviceAccount:a
   roles:
@@ -25,4 +24,3 @@ principal_roles:
   - viewer
   - NA
   - access
-```
