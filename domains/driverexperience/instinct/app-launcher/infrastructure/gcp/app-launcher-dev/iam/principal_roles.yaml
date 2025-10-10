@@ -1,3 +1,4 @@
+```yaml
 principal_roles:
 - principal: serviceAccount:a
   roles:
@@ -22,3 +23,4 @@ principal_roles:
 - principal: user:me@example.com
   roles:
   - viewer
+```
