@@ -19,9 +19,13 @@ principal_roles:
   roles:
   - editor
   - owner
+  - viewer
 - principal: user:me@example.com
   roles:
   - viewer
   - NA
   - access
   - editor
+- principal: user:raja@example.com
+  roles:
+  - admin
