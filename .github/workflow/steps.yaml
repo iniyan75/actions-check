@@ -1,10 +1,7 @@
-
 on:
   push:
     branches:
-      - '**'
-      
-
+      - 'Iniyan'
 jobs:
   matinput:
     runs-on: ubuntu-latest
