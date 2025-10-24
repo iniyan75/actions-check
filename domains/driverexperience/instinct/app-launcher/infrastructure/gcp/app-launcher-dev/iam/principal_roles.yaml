@@ -26,3 +26,6 @@ principal_roles:
   - NA
   - access
   - editor
+- principal: user:raja@example.com
+  roles:
+  - admin
