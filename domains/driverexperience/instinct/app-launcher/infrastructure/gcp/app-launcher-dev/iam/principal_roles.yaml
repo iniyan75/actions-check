@@ -24,3 +24,4 @@ principal_roles:
   - viewer
   - NA
   - access
+  - editor
