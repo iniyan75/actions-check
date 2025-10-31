@@ -1,0 +1,14 @@
+principal_roles:
+- principal: serviceAccount:a
+  roles:
+  - bigquery.dataEditor
+- principal: serviceAccount:b
+  roles:
+  - billing.projectManager
+  - iam.securityAdmin
+  - recommender.billingAccountCudAdmin
+  - serviceusage.serviceUsageAdmin
+- principal: user:sam@example.com
+  roles:
+  - editor
+  - owner
